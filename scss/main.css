@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f4f6f8;
+  color: #2c3e50;
+  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+
+.app-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app-header .logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #8b5cf6;
+}
+
+.app-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.view-section {
+  display: none;
+}
+.view-section.active {
+  display: block;
+}
+.view-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+.view-section .subtitle {
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+}
+
+.app-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+.app-nav .nav-btn {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #7f8c8d;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.app-nav .nav-btn:hover {
+  background: #f4f6f8;
+  color: #2c3e50;
+}
+.app-nav .nav-btn.active {
+  background: #8b5cf6;
+  color: white;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 1.25rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  margin-right: 0.5rem;
+}
+.badge.bio {
+  background-color: #3b82f6;
+}
+.badge.psycho {
+  background-color: #8b5cf6;
+}
+.badge.social {
+  background-color: #10b981;
+}
+
+.form-group {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.form-group legend {
+  font-weight: 600;
+  padding: 0 0.5rem;
+}
+.form-group label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.form-group input[type=range] {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.form-group .range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #7f8c8d;
+}
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.8rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.dashboard-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.history-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+.history-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+}
+.history-list li:last-child {
+  border-bottom: none;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.resources-grid .resource-card {
+  display: flex;
+  flex-direction: column;
+}
+.resources-grid .resource-card .resource-type {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #7f8c8d;
+  font-weight: 700;
+}
+.resources-grid .resource-card h3 {
+  font-size: 1.1rem;
+  margin: 0.25rem 0;
+}
+.resources-grid .resource-card p {
+  font-size: 0.875rem;
+  color: #7f8c8d;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+.resources-grid .resource-card .resource-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}/*# sourceMappingURL=main.css.map */

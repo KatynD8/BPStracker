@@ -1,0 +1,59 @@
+@use "variables" as *;
+
+.dashboard-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.history-list {
+  list-style: none;
+  margin-top: 1rem;
+
+  li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid $color-border;
+    display: flex;
+    justify-content: space-between;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+
+  .resource-card {
+    display: flex;
+    flex-direction: column;
+
+    .resource-type {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: $color-text-light;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin: 0.25rem 0;
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: $color-text-light;
+      flex-grow: 1;
+      margin-bottom: 1rem;
+    }
+
+    .resource-link {
+      color: $color-bio;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+  }
+}

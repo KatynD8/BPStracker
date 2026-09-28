@@ -1,0 +1,111 @@
+@use "variables" as *;
+
+.app-nav {
+  display: flex;
+  gap: 0.5rem;
+
+  .nav-btn {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    color: $color-text-light;
+    font-weight: 500;
+    transition: all $transition-fast;
+
+    &:hover {
+      background: $color-bg;
+      color: $color-text;
+    }
+
+    &.active {
+      background: $color-psycho;
+      color: white;
+    }
+  }
+}
+
+.card {
+  background: $color-surface;
+  border-radius: $radius-md;
+  border: 1px solid $color-border;
+  padding: 1.25rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: $radius-sm;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  margin-right: 0.5rem;
+
+  &.bio {
+    background-color: $color-bio;
+  }
+  &.psycho {
+    background-color: $color-psycho;
+  }
+  &.social {
+    background-color: $color-social;
+  }
+}
+
+.form-group {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+
+  legend {
+    font-weight: 600;
+    padding: 0 0.5rem;
+  }
+
+  label {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  input[type="range"] {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: $color-text-light;
+  }
+
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: $radius-sm;
+    border: 1px solid $color-border;
+  }
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.8rem;
+  background: $color-social;
+  color: white;
+  border: none;
+  border-radius: $radius-md;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity $transition-fast;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

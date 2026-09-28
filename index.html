@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura — Suivi Bio-Psycho-Social</title>
+    <link rel="stylesheet" href="/scss/main.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="logo">Aura</div>
+      <nav class="app-nav">
+        <button class="nav-btn active" data-target="section-checkin">
+          Bilan du jour
+        </button>
+        <button class="nav-btn" data-target="section-dashboard">
+          Tableau de bord
+        </button>
+        <button class="nav-btn" data-target="section-resources">
+          Ressources
+        </button>
+      </nav>
+    </header>
+
+    <main class="app-content">
+      <!-- SECTION 1 : CHECK-IN BIO-PSYCHO-SOCIAL -->
+      <section id="section-checkin" class="view-section active">
+        <h2>Comment vas-tu aujourd'hui ?</h2>
+        <p class="subtitle">
+          Une évaluation rapide pour comprendre ton équilibre quotidien.
+        </p>
+
+        <form id="checkin-form">
+          <!-- VOLET BIOLOGIQUE -->
+          <fieldset class="form-group">
+            <legend><span class="badge bio">Bio</span> Corps & Énergie</legend>
+
+            <label for="bio-energy">Niveau d'énergie physique</label>
+            <input type="range" id="bio-energy" min="1" max="5" value="3" />
+            <div class="range-labels">
+              <span>Épuisé</span><span>Plein de peps</span>
+            </div>
+
+            <label for="bio-sensory">Surcharge sensorielle subie</label>
+            <input type="range" id="bio-sensory" min="1" max="5" value="1" />
+            <div class="range-labels">
+              <span>Calme</span><span>Intolérable</span>
+            </div>
+
+            <label for="bio-sleep">Qualité du sommeil</label>
+            <select id="bio-sleep">
+              <option value="good">Restaurateur</option>
+              <option value="medium" selected>Moyen / Agité</option>
+              <option value="bad">Insuffisant / Difficile</option>
+            </select>
+          </fieldset>
+
+          <!-- VOLET PSYCHOLOGIQUE -->
+          <fieldset class="form-group">
+            <legend>
+              <span class="badge psycho">Psycho</span> Mental & Émotions
+            </legend>
+
+            <label for="psycho-mood">Humeur générale</label>
+            <input type="range" id="psycho-mood" min="1" max="5" value="3" />
+            <div class="range-labels">
+              <span>Très bas</span><span>Très serein</span>
+            </div>
+
+            <label for="psycho-executive"
+              >Fonction exécutive (capacité à démarrer/enchaîner)</label
+            >
+            <input
+              type="range"
+              id="psycho-executive"
+              min="1"
+              max="5"
+              value="3"
+            />
+            <div class="range-labels">
+              <span>Blocage fort</span><span>Fluide</span>
+            </div>
+
+            <label for="psycho-anxiety">Niveau d'anxiété</label>
+            <input type="range" id="psycho-anxiety" min="1" max="5" value="2" />
+            <div class="range-labels">
+              <span>Nul</span><span>Très élevé</span>
+            </div>
+          </fieldset>
+
+          <!-- VOLET SOCIAL -->
+          <fieldset class="form-group">
+            <legend>
+              <span class="badge social">Social</span> Interactions &
+              Environnement
+            </legend>
+
+            <label for="social-battery">Batterie sociale restante</label>
+            <input type="range" id="social-battery" min="1" max="5" value="3" />
+            <div class="range-labels">
+              <span>Aplat</span><span>Remplie</span>
+            </div>
+
+            <label for="social-masking"
+              >Effort de camouflaged/masking fourni</label
+            >
+            <input type="range" id="social-masking" min="1" max="5" value="2" />
+            <div class="range-labels">
+              <span>Aucun (soi-même)</span><span>Énorme</span>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn-primary">
+            Enregistrer ma journée
+          </button>
+        </form>
+      </section>
+
+      <!-- SECTION 2 : DASHBOARD -->
+      <section id="section-dashboard" class="view-section">
+        <h2>Tableau de bord</h2>
+        <p class="subtitle">Historique récent de tes ressentis.</p>
+
+        <div class="dashboard-grid">
+          <div class="card metric-card">
+            <h3>Statut d'aujourd'hui</h3>
+            <div id="latest-status">Aucune donnée renseignée aujourd'hui.</div>
+          </div>
+
+          <div class="card history-card">
+            <h3>Historique des entrées</h3>
+            <ul id="history-list" class="history-list">
+              <!-- Injecté via JS -->
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3 : RESSOURCES -->
+      <section id="section-resources" class="view-section">
+        <h2>Espace Ressources</h2>
+        <p class="subtitle">
+          Sélection de contenus adaptés aux profils TSA & TDAH.
+        </p>
+
+        <div class="resources-grid">
+          <article class="card resource-card">
+            <span class="resource-type">Vidéo</span>
+            <h3>Gérer l'inertie TDAH</h3>
+            <p>
+              Techniques douces pour surmonter la paralysie de tâche sans
+              culpabilité.
+            </p>
+            <a href="#" class="resource-link">Consulter</a>
+          </article>
+
+          <article class="card resource-card">
+            <span class="resource-type">Lecture</span>
+            <h3>Le burnout autistique vs professionnel</h3>
+            <p>
+              Comprendre les spécificités du burnout neurodivergent et la
+              surcharge sensorielle.
+            </p>
+            <a href="#" class="resource-link">Consulter</a>
+          </article>
+
+          <article class="card resource-card">
+            <span class="resource-type">Outil</span>
+            <h3>Guide de régulation sensorielle</h3>
+            <p>
+              Identifier ses déclencheurs et aménager un espace de
+              décompression.
+            </p>
+            <a href="#" class="resource-link">Consulter</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

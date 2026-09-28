@@ -1,0 +1,59 @@
+@use "variables" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background-color: $color-bg;
+  color: $color-text;
+  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+
+.app-header {
+  background: $color-surface;
+  border-bottom: 1px solid $color-border;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: $color-psycho;
+  }
+}
+
+.app-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.view-section {
+  display: none;
+  &.active {
+    display: block;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitle {
+    color: $color-text-light;
+    margin-bottom: 1.5rem;
+  }
+}
